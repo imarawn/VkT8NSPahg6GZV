@@ -3,7 +3,7 @@
     "type": "string",
     "title": "User Ranks",
     "description": "symbol;threshold,symbol2;threshold2...",
-    "default": "\":Kannasthesia5k;5000,:Kannasthesia15k;15000,:Kannasthesia25k;25000,:Kannasthesia50k;50000,:Kannasthesia100k;100000,:Kannasthesia250k;250000,:Kannasthesia500k;500000\""
+    "default": ":Kannasthesia5k;5000,:Kannasthesia15k;15000,:Kannasthesia25k;25000,:Kannasthesia50k;50000,:Kannasthesia100k;100000,:Kannasthesia250k;250000,:Kannasthesia500k;500000"
   },
   "fouthcolor": {
     "type": "string",
