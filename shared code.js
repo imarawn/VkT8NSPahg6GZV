@@ -61,6 +61,10 @@ const messages = (command) => {
       return `User {username} got updated and has the prefix {prefix} now`
     case 'succsessIndividualInfo':
       return `You tipped {tokens} tokens\nand have {points} points`
+    case 'correctWordGuess':
+      return `{username} guessed the word right`
+    case 'correctLetterGuess':
+      return `{username} guessed the right Letter {letter}`
   }
 }
 
@@ -270,6 +274,7 @@ const handleGuess = (guess) => {
       word.TIME = Date.now()
       word.COUNT = 1
       word.USERS.push($user.username)
+      $room.sendNotice(messages('correctWordGuess').replace('{username}', $user.username), {toUsername: $room.owner, bgColor: 'red'})
     } else if (guess === word.WORD && word.COUNT >= 1) {
       if (guess === word.WORD && Date.now() - word.TIME < delay) {
         userlist[$user.username].points += correctword2
@@ -287,6 +292,7 @@ const handleGuess = (guess) => {
       word.WORDARRAY[guess].TIME = Date.now()
       userlist[$user.username].points += correctletter1
       word.WORDARRAY[guess].USERS.push($user.username)
+      $room.sendNotice(messages('correctLetterGuess').replace('{username}', $user.username).replace('{letter}', guess), {toUsername: $room.owner, bgColor: 'red'})
     } else if (word.WORDARRAY[guess].COUNT >= 1) {
       if (Date.now() - word.WORDARRAY[guess].TIME >= delay) {
         word.WORDARRAY[guess].COUNT += 1000
