@@ -74,13 +74,13 @@ const staticMessages = {
 
   errorLeaveGame: 'You cant leave something that isnt there' /*, opposite to your dad who left you when you were not even born',
   successLeaveGame: `You have been removed from the participants` */,
+  successLeaveGame: ':bbye9',
 
   errorKickuser: 'Darling, in case you forgot, we dont have a game going on right now so there would not be the slightest point to punish someone for somehting he clearly didnt do.',
   successKickForKicked: 'You got kicked form the game and your points got resetted',
 
   successNewWord: 'New Word has been set',
   errorNewWord: 'You have to provide a Word',
-
 
   errorRedeemNoGameRunning: 'Prizes can only be redeemed when a game is running',
   errorRedeemInvalidamount: 'Invalid amount provided',
@@ -100,8 +100,6 @@ const staticMessages = {
   errorGameStarted: 'There is already a game running',
 
   successFreeGuess: 'You successfully submitted your free guess, you little freeloader, not even want to tip for the stuff you are getting here',
-
-
 }
 
 //---------UTILITY------------
@@ -384,8 +382,12 @@ const handleCommands = (message) => {
   let slashCommand = args.shift();
 
   switch (slashCommand) {
-    case commands.PREFIX + commands.PLAYGAME:
+    case commands.PREFIX + commands.PLAYGAME:{
+      let rules = $settings.hmrules.split('{br}')
+      $room.sendNotice(rules.join('\n'), {toUsername: $user.username})
       return addParticipant($user.username)
+    }
+    
     case commands.PREFIX + commands.LEAVEGAME:
       return removeParticipant($user.username)
   }
@@ -436,7 +438,7 @@ const handleCommands = (message) => {
 
       case commands.PREFIX + commands.GETKVVALUES:
         if ($app.version === 'Testbed') {
-          return [`${JSON.stringify(getuserRanks())}\n ${JSON.stringify(getUserList())}\n${$kv.get('gamerunning', false)}\n${JSON.stringify($kv.get('pointMenuTips', {}))}`, ''];
+          return [`${JSON.stringify(getuserRanks())}\n ${JSON.stringify(getUserList())}\n${$kv.get('gamerunning', false)}\n${JSON.stringify($kv.get('pointMenuTips', {}))}\n${JSON.stringify($kv.get('word', {}))}`, ''];
         }
         return [staticMessages.errorCommandNotAllowed, $user.username]
 
@@ -479,7 +481,7 @@ const handleCommands = (message) => {
     }
   }
 
-  if ($user.inFanclub && $settings.fanclubguess && getUserList()[$user.username] && getUserList()[$user.username].participant) {
+  if ($user.inFanclub && $settings.fanclubguess && getUserList()[$user.username] && getUserList()[$user.username].participant || getUserList()[$user.username].fourth) {
     switch (slashCommand) {
       case commands.PREFIX + commands.FREEGUESS: {
         handleGuess(handleTipnote(args[0]))
