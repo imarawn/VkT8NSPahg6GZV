@@ -227,14 +227,14 @@ const rem4th = (username) => {
 
 //----------HANGMAN----------
 
-const letterTip = 5
+const letterTip = $settings.letterTip
 const wordTip = 10
-const penalty = -10
-const correctletter1 = 1
-const correctletter2 = 0.5
-const correctword1 = 3
-const correctword2 = 1.5
-const delay = 30 * 1000
+const penalty = $settings.penalty
+const correctletter1 = $settings.correctletter1
+const correctletter2 = $settings.correctLetter2
+const correctword1 = $settings.correctword1
+const correctword2 = $settings.correctword2
+const delay = $settings.hmdelay * 1000
 const gamerunning = () => $kv.get('gamerunning', false)
 const letterTemplate = { COUNT: 0, TIME: 0, USERS: [] }
 
