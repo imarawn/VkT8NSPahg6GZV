@@ -1,0 +1,140 @@
+{
+  "rank": {
+    "type": "string",
+    "title": "User Ranks",
+    "description": "symbol;threshold,symbol2;threshold2...",
+    "default": "schlort;10,schledium;20,schlong;30"
+  },
+  "fouthcolor": {
+    "type": "string",
+    "title": "Color for muted people☃"
+  },
+  "fourthbgcolor": {
+    "type": "string",
+    "title": "Background color for muted people"
+  },
+  "fourthweight": {
+    "type": "string",
+    "title": "Fontweight for muted people",
+    "enum": [
+      "normal",
+      "bold",
+      "bolder"
+    ],
+    "default": "normal"
+  },
+  "fanclubguess": {
+    "type": "boolean",
+    "title": "Free Fanclub Guess",
+    "default": false
+  },
+  "pointmenutitle": {
+    "type": "string",
+    "title": "Title for point menu",
+    "default": "Point Menu"
+  },
+  "pointmemote": {
+    "type": "string",
+    "title": "Emote for Point menu"
+  },
+  "pointmenu1": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu2": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu3": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu4": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu5": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu6": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu7": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu8": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu9": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu10": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu11": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu12": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu13": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu14": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu15": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu16": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu17": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu18": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu19": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  },
+  "pointmenu20": {
+    "type": "string",
+    "title": "Point menu Item 1",
+    "description": "item;amount"
+  }
+}
