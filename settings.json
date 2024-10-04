@@ -140,7 +140,7 @@
   "hmrules": {
     "type": "string",
     "title": "Rules for Hangman",
-    "default": "test\\ntest1\\ntest2"
+    "default": "use {br} to add line breaks"
   },
   "letterTip": {
     "type": "number",
