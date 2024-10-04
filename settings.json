@@ -3,7 +3,7 @@
     "type": "string",
     "title": "User Ranks",
     "description": "symbol;threshold,symbol2;threshold2...",
-    "default": "schlort;10,schledium;20,schlong;30"
+    "default": ":Kannasthesia5k;5000,:Kannasthesia15k;15000,:Kannasthesia25k;25000,:Kannasthesia50k;50000,:Kannasthesia100k;100000,:Kannasthesia250k;250000,:Kannasthesia500k;500000"
   },
   "fouthcolor": {
     "type": "string",
@@ -136,5 +136,46 @@
     "type": "string",
     "title": "Point menu Item 1",
     "description": "item;amount"
+  },
+  "hmrules": {
+    "type": "string",
+    "title": "Rules for Hangman",
+    "default": "use {br} to add line breaks"
+  },
+  "letterTip": {
+    "type": "number",
+    "title": "Guess Price",
+    "required": true,
+    "default": 5
+  },
+  "penalty": {
+    "type": "number",
+    "title": "Point amount to set when a user gets kicked",
+    "default": -10
+  },
+  "correctletter1": {
+    "type": "number",
+    "title": "Points for the first correct Letter guess",
+    "default": 1
+  },
+  "correctLetter2": {
+    "type": "number",
+    "title": "Points for correct letter guesses after a right guess",
+    "default": 0.5
+  },
+  "correctword1": {
+    "type": "number",
+    "title": "Points for correct word guess",
+    "default": 3
+  },
+  "correctword2": {
+    "type": "number",
+    "title": "points for any additional correct word guess",
+    "default": 1.5
+  },
+  "hmdelay": {
+    "type": "number",
+    "title": "Delay for users to be able to tip for a letter",
+    "default": 30
   }
 }
